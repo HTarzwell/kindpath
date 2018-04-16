@@ -1,0 +1,13 @@
+<form {{action 'createItem' on='submit'}}>
+  <label>Date</label>
+  {{input placeholder='YYYY-MM-DD' value=newItem.date}}
+  <label>Description</label>
+  {{input placeholder='What do you want to do?' value=newItem.description}}
+  <label>Energy Needed</label>
+  {{input placeholder='Low or normal?' value=newItem.energy_needed}}
+  <label>Is It Complete?</label>
+  {{input placeholder='True or false?' value=newItem.is_completed}}
+  <label>Is It Crucial?</label>
+  {{input placeholder='True or false?' value=newItem.is_crucial}}
+  <button type='submit'>Create New</button>
+</form>
