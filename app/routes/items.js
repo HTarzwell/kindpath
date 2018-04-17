@@ -16,6 +16,13 @@ export default Route.extend({
     },
     deleteItem (item) {
       item.destroyRecord()
+    },
+    updateItem (item) {
+      item.save()
+      console.log('item in items js is ', item)
+      // update item needs to get the item properties from uihbs (done already?)
+      // update item needs to set those item properties to THIS specific item
+      // update item needs to save this new thing
     }
   }
 })

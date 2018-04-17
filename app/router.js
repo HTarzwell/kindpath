@@ -12,9 +12,7 @@ Router.map(function () {
   this.route('change-password')
   this.route('users')
   this.route('items', function () {
-    this.route('list-items', function () {
-      this.route('items')
-    })
+    this.route('list-items')
   })
 })
 
