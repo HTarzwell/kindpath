@@ -1,10 +1,8 @@
 import Route from '@ember/routing/route'
+import { inject as service } from '@ember/service'
 
 export default Route.extend({
-  // model (params) {
-  // go get the necessary list
-    // return this.get('store').findRecord('items', params.list_id)
-  // },
+  flashMessages: service(),
   model () {
     return this.get('store').findAll('item')
   },
@@ -12,17 +10,36 @@ export default Route.extend({
     createItem (newItem) {
       this.get('store').createRecord('item', newItem)
       .save()
-      console.log('new item in items.js is', newItem)
+      .then(() => {
+        this.get('flashMessages')
+          .success('You created a new item!')
+      })
+      .catch(() => {
+        this.get('flashMessages')
+          .danger('There was a problem. Please try again.')
+      })
     },
     deleteItem (item) {
       item.destroyRecord()
+      .then(() => {
+        this.get('flashMessages')
+          .warning('You deleted this item!')
+      })
+      .catch(() => {
+        this.get('flashMessages')
+          .danger('There was a problem. Please try again.')
+      })
     },
     updateItem (item) {
       item.save()
-      console.log('item in items js is ', item)
-      // update item needs to get the item properties from uihbs (done already?)
-      // update item needs to set those item properties to THIS specific item
-      // update item needs to save this new thing
+      .then(() => {
+        this.get('flashMessages')
+          .success('You updated this item!')
+      })
+      .catch(() => {
+        this.get('flashMessages')
+          .danger('There was a problem. Please try again.')
+      })
     }
   }
 })
