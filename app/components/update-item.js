@@ -7,7 +7,6 @@ export default Component.extend({
   actions: {
     updateItem () {
       this.sendAction('updateItem', this.get('item'))
-      console.log('updateItem fired in updateitem.js')
     }
   }
 })
