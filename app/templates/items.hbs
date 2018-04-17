@@ -1,16 +1,13 @@
 <h3>My To-Dos</h3>
 
 <div class="col-md-6">
-{{list-items persistItem='createItem'}}
-</div>
-<div>
-  <h4>Today's To-Dos</h4>
     {{#each model as |item|}}
-    <h5>Item: {{item.description}}</h5>
-    <p>Date: {{item.date}}</p>
-    <p>Energy: {{item.energy_needed}}</p>
-    <p>Completed? {{item.is_completed}}</p>
-    <p>Crucial? {{item.is_crucial}}</p>
+    <h4>Item: {{item.description}}</h4>
+    <p><strong>Date:</strong> {{item.date}}</p>
+    <p><strong>Energy:</strong> {{item.energy_needed}}</p>
+    <p><strong>Completed?</strong> {{item.is_completed}}</p>
+    <p><strong>Crucial?</strong> {{item.is_crucial}}</p>
+    <button {{action 'deleteItem' item}}>Delete Item</button>
     {{/each}}
   {{new-item createItem='createItem'}}
 </div>

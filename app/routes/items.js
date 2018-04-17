@@ -13,6 +13,9 @@ export default Route.extend({
       this.get('store').createRecord('item', newItem)
       .save()
       console.log('new item in items.js is', newItem)
+    },
+    deleteItem (item) {
+      item.destroyRecord()
     }
   }
 })
