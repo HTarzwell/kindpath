@@ -24,10 +24,25 @@
 
 <h1><span class="kind">kind</span><span class="path">Path</span></h1>
 
+{{#if isAuthenticated}}
+  <h1>How is your <span class="energy-head">energy level</span> today?</h1>
+  <div class="energy-level">
+    <div>
+      <label class="form-check-label" for="inlineCheckbox1">Normal</label>
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    </div>
+    <div>
+      <label class="form-check-label" for="inlineCheckbox2">Low</label>
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    </div>
+    <button>Submit</button>
+  </div>
+{{/if}}
+
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
 
-<div class="col-md-12 col-md-offset-2">
+<div class="holding col-md-12 col-md-offset-2">
   {{outlet}}
 </div>

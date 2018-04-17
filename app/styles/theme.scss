@@ -24,6 +24,7 @@ h1 {
 h2,
 h3 {
   color: $tomato;
+  text-align: center;
 }
 
 h4 {
@@ -32,4 +33,20 @@ h4 {
 
 .navbar {
   background-color: $blanched-almond;
+}
+
+.energy-head {
+  color: $tomato;
+}
+
+.all-items {
+  text-align: center;
+}
+
+.energy-level {
+  text-align: center;
+}
+
+.crucial {
+  color: $tomato;
 }
