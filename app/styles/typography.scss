@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Nanum+Pen+Script|Sacramento');;
+
+$sacramento: 'Sacramento', cursive;
+$josefin-slab: 'Josefin Slab', serif;
+$nanum-pen-script: 'Nanum Pen Script', cursive;
+
+body {
+  font-family: $josefin-slab;
+}
+
+h1 {
+  font-family: $sacramento;
+}
+
+h2,
+h3,
+h4 {
+  font-family: $nanum-pen-script;
+}

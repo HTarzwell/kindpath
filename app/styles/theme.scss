@@ -1,0 +1,35 @@
+$white: #FFFFFF;
+$blanched-almond: #FFE8D1;
+$rackley: #568EA3;
+$sea-serpent: #68C3D4;
+$tomato: #FF6542;
+
+body {
+  background-color: $white;
+  color: $rackley;
+}
+
+h1 {
+  text-align: center;
+}
+
+.kind {
+  color: $sea-serpent;
+}
+
+.path {
+  color: $tomato;
+}
+
+h2,
+h3 {
+  color: $tomato;
+}
+
+h4 {
+  color: $sea-serpent;
+}
+
+.navbar {
+  background-color: $blanched-almond;
+}

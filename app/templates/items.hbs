@@ -7,8 +7,8 @@
     <p><strong>Energy:</strong> {{item.energy_needed}}</p>
     <p><strong>Completed?</strong> {{item.is_completed}}</p>
     <p><strong>Crucial?</strong> {{item.is_crucial}}</p>
-    <button>Edit this Item</button>
     <button {{action 'deleteItem' item}}>Delete Item</button>
+    <button>Edit Item</button>
     {{update-item item=item
       updateItem='updateItem'}}
     {{/each}}
