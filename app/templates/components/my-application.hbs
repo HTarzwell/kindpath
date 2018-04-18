@@ -1,11 +1,11 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     {{navbar-header}}
+    <h1>{{#link-to "application" class="navbar-brand"}}<span class="kind">kind</span><span class="path">Path</span>{{/link-to}}</h1>
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "users"}}Users{{/link-to}}</li>
         <li>{{#link-to "items"}}Items{{/link-to}}</li>
         {{/if}}
       </ul>
@@ -21,8 +21,6 @@
     </div>
   </div>
 </nav>
-
-<h1><span class="kind">kind</span><span class="path">Path</span></h1>
 
 {{#if isAuthenticated}}
   <h1>How is your <span class="energy-head">energy level</span> today?</h1>
