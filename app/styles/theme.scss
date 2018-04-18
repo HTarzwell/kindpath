@@ -40,26 +40,66 @@ h4 {
 }
 
 .holding {
-  border: 4px solid orange;
 }
 
 .all-items {
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 3px solid green;
 }
 
 .each-item {
   width: 100%;
-  border: 2px solid red;
 }
 
 .lone-item {
-  border: 1px solid blue;
   width: 100%;
   display: flex;
-  padding: 20px;
+  padding: 10px;
+}
+
+.is-completed {
+  display: flex;
+}
+
+.item-name {
+  width: 50%;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.date {
+
+}
+
+.energy-needs {
+
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 2px solid red;
+}
+
+.delete-button {
+  width: 100%;
+  height: 50%;
+  background-color: $tomato;
+}
+
+.edit-button {
+  width: 100%;
+  height: 50%;
+}
+
+.add-item-button {
+  margin: 10px;
 }
 
 .energy-level {

@@ -1,18 +1,30 @@
-<div class="lone-item">
-<input class="form-check-input" type="checkbox" {{action 'crossOff'}}>
-<h4>Item: {{item.description}}</h4>
+<div class="lone-item container">
+  <div class="is-completed">
+    <input class="form-check-input" type="checkbox" {{action 'crossOff'}}>
+  </div>
+  <div class="item-name col-lg-12">
+    <h4>Item: {{item.description}}</h4>
+    {{#if isEditing}}
+      {{update-item item=item
+        updateItem='updateItem'}}
+    {{/if}}
+  </div>
   {{#if isCompleted}}
   {{else}}
     <div class="item-content">
-      <p><strong>Date:</strong> {{item.date}}</p>
-      <p><strong>Energy:</strong> {{item.energy_needed}}</p>
-      <p class="crucial"><strong>Crucial?</strong> {{item.is_crucial}}</p>
-      <button {{action 'deleteItem' item}}>Delete Item</button>
-      <button {{action toggleProperty 'isEditing'}}>Edit Item</button>
-      {{#if isEditing}}
-        {{update-item item=item
-          updateItem='updateItem'}}
-      {{/if}}
+      <div class="date">
+        <p><strong>Date:</strong> {{item.date}}</p>
+      </div>
+      <div class="energy-needs">
+        <p><strong>Energy:</strong> {{item.energy_needed}}</p>
+      </div>
+      <div class="crucial">
+        <p><strong>Crucial?</strong> {{item.is_crucial}}</p>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="delete-button"{{action 'deleteItem' item}}>Delete Item</button>
+      <button class="edit-button"{{action toggleProperty 'isEditing'}}>Edit Item</button>
     </div>
   {{/if}}
 </div>

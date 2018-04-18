@@ -7,7 +7,9 @@
       deleteItem='deleteItem'}}
     </div>
     {{/each}}
-  <button {{action toggleProperty 'addNew'}}>Add New Item</button>
+    <div class="add-item-button">
+      <button {{action toggleProperty 'addNew'}}>Add New Item</button>
+    </div>
   {{#if addNew}}
     {{new-item createItem='createItem'}}
   {{/if}}
