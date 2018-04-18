@@ -66,12 +66,14 @@ However,
 
 ## App Screenshot
 
+![App Screenshot](zimg/AppScreenShot.png)
+
 ## Wireframes
 
-![1](zimg/WF1.jpg)
-![2](zimg/WF1.jpg)
-![3](zimg/WF1.jpg)
-![4](zimg/WF1.jpg)
+![Wireframe1](zimg/WF1.jpg)
+![Wireframe2](zimg/WF1.jpg)
+![Wireframe3](zimg/WF1.jpg)
+![Wireframe4](zimg/WF1.jpg)
 
 ## User Stories
 
