@@ -5,7 +5,6 @@ export default Component.extend({
     // return this.get('store').findRecord('items', params.this.item)
   // },
   // attributeBindings: ['isVisible:updateForm'],
-  // isVisible: false,
   actions: {
     updateItem () {
       this.sendAction('updateItem', this.get('item'))

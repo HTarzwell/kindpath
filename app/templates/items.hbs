@@ -7,9 +7,12 @@
       <p><strong>Completed?</strong> {{item.is_completed}}</p>
       <p class="crucial"><strong>Crucial?</strong> {{item.is_crucial}}</p>
       <button {{action 'deleteItem' item}}>Delete Item</button>
-      <button {{action 'onClick'}}>Edit Item</button>
+      <label>Check to Edit</label>
+      {{input placeholder="Edit" type="checkbox" checked=isVisible}}
+      {{#if isVisible}}
       {{update-item item=item
         updateItem='updateItem'}}
+      {{/if}}
     {{/each}}
   {{new-item createItem='createItem'}}
 </div>
