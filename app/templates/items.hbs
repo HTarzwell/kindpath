@@ -1,18 +1,12 @@
 <h3>My To-Dos</h3>
 <div class="all-items col-md-6">
     {{#each model as |item|}}
-      <h4>Item: {{item.description}}</h4>
-      <p><strong>Date:</strong> {{item.date}}</p>
-      <p><strong>Energy:</strong> {{item.energy_needed}}</p>
-      <p><strong>Completed?</strong> {{item.is_completed}}</p>
-      <p class="crucial"><strong>Crucial?</strong> {{item.is_crucial}}</p>
-      <button {{action 'deleteItem' item}}>Delete Item</button>
-      <label>Check to Edit</label>
-      {{input placeholder="Edit" type="checkbox" checked=isVisible}}
-      {{#if isVisible}}
-      {{update-item item=item
-        updateItem='updateItem'}}
-      {{/if}}
+      {{my-item item=item
+      updateItem='updateItem'
+      deleteItem='deleteItem'}}
     {{/each}}
-  {{new-item createItem='createItem'}}
+  <button {{action toggleProperty 'addNew'}}>Add New Item</button>
+  {{#if addNew}}
+    {{new-item createItem='createItem'}}
+  {{/if}}
 </div>
