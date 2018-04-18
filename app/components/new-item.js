@@ -11,7 +11,13 @@ export default Component.extend({
   actions: {
     createItem () {
       this.sendAction('createItem', this.get('newItem'))
-      console.log('Create Item fired in new-item.js')
+      // .then(() => {
+      this.set('newItem.date', '')
+      this.set('newItem.description', '')
+      this.set('newItem.energy_needed', '')
+      this.set('newItem.is_completed', '')
+      this.set('newItem.is_crucial', '')
+      // })
     }
   }
 })
