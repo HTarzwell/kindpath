@@ -21,7 +21,7 @@
     </div>
   </div>
 </nav>
-
+<div class="holding col-md-12 col-md-offset-2">
 {{#if isAuthenticated}}
   <h1>How is your <span class="energy-head">energy level</span> today?</h1>
   <div class="energy-level">
@@ -41,6 +41,5 @@
   {{flash-message flash=flash}}
 {{/each}}
 
-<div class="holding col-md-12 col-md-offset-2">
   {{outlet}}
 </div>
