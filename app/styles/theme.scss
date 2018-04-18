@@ -7,24 +7,29 @@ $tomato: #FF6542;
 body {
   background-color: $white;
   color: $rackley;
+  font-size: 20px;
 }
 
 h1 {
   text-align: center;
+  font-size: 3em;
 }
 
 .kind {
   color: $sea-serpent;
+  font-size: 3em;
 }
 
 .path {
   color: $tomato;
+  font-size: 3em;
 }
 
 h2,
 h3 {
   color: $tomato;
   text-align: center;
+  font-size: 3em;
 }
 
 h4 {
@@ -66,10 +71,15 @@ h4 {
   width: 50%;
 }
 
+.item-name h4 {
+  font-size: 2em;
+}
+
 .item-content {
   display: flex;
   flex-direction: column;
   width: 75%;
+  font-size: 1em;
 }
 
 .date {
@@ -84,26 +94,75 @@ h4 {
   display: flex;
   flex-direction: column;
   width: 50%;
-  border: 2px solid red;
+  font-size: 20px;
 }
 
 .delete-button {
   width: 100%;
   height: 50%;
+  color: $white;
   background-color: $tomato;
+  border-radius: 8px;
+}
+
+.delete-button:hover {
+  background-color: red;
 }
 
 .edit-button {
   width: 100%;
   height: 50%;
+  color: $white;
+  background-color: $sea-serpent;
+  border-radius: 8px;
 }
 
-.add-item-button {
+.edit-button:hover {
+  background-color: $rackley;
+}
+
+.add-item-button button {
   margin: 10px;
+  width: 100%;
+  background-color: $blanched-almond;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+.add-item-button button:hover {
+  background-color: $sea-serpent;
+  color: $white;
 }
 
 .energy-level {
-  text-align: center;
+  padding: 3em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.energy-level button {
+  width: 35%;
+  border-radius: 8px;
+}
+
+.normal {
+  background-color: $sea-serpent;
+  color: white;
+  font-size: 3em;
+}
+
+.normal:hover {
+  background-color: $rackley;
+}
+
+.low {
+  background-color: $tomato;
+  color: $white;
+  font-size: 3em;
+}
+
+.low:hover {
+  background-color: red;
 }
 
 .crucial {

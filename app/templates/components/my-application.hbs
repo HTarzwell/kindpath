@@ -5,9 +5,6 @@
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
-        {{#if isAuthenticated}}
-        <li>{{#link-to "items"}}Items{{/link-to}}</li>
-        {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
@@ -21,25 +18,19 @@
     </div>
   </div>
 </nav>
-<div class="holding col-md-12 col-md-offset-2">
+<div class="holding col-md-12">
 {{#if isAuthenticated}}
   <h1>How is your <span class="energy-head">energy level</span> today?</h1>
   <div class="energy-level">
-    <div>
-      <label class="form-check-label" for="inlineCheckbox1">Normal</label>
-      <input class="form-check-input" type="checkbox" value="normal">
-    </div>
-    <div>
-      <label class="form-check-label" for="inlineCheckbox2">Low</label>
-      <input class="form-check-input" type="checkbox" value="low">
-    </div>
-    <button>Submit</button>
+    <button class="normal" {{action toggleProperty 'energySelected'}}>{{#link-to "items"}}Normal{{/link-to}}</button>
+    <button class="low" {{action toggleProperty 'energySelected'}}>{{#link-to "items"}}Low{{/link-to}}</button>
   </div>
 {{/if}}
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
-
+{{#if energySelected}}
   {{outlet}}
+{{/if}}
 </div>

@@ -1,6 +1,6 @@
 <div class="lone-item container">
   <div class="is-completed">
-    <input class="form-check-input" type="checkbox" {{action 'crossOff'}}>
+    <input type="checkbox" {{action 'crossOff'}}>
   </div>
   <div class="item-name col-lg-12">
     <h4>Item: {{item.description}}</h4>
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="buttons">
-      <button class="delete-button"{{action 'deleteItem' item}}>Delete Item</button>
+      <button class="delete-button"{{action 'deleteItem' item}}>Delete</button>
       <button class="edit-button"{{action toggleProperty 'isEditing'}}>Edit Item</button>
     </div>
   {{/if}}
