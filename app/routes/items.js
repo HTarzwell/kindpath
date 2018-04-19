@@ -41,8 +41,10 @@ export default Route.extend({
           .danger('There was a problem. Please try again.')
       })
     },
-    saveComplete () {
+    saveComplete (item) {
       console.log('saveComplete is firing in items js')
+      item.save()
+      console.log('item in saveComplete is', item)
     }
   }
 })
