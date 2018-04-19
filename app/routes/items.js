@@ -40,6 +40,9 @@ export default Route.extend({
         this.get('flashMessages')
           .danger('There was a problem. Please try again.')
       })
+    },
+    saveComplete () {
+      console.log('saveComplete is firing in items js')
     }
   }
 })

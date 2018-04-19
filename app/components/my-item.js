@@ -9,7 +9,7 @@ export default Component.extend({
     crossOff () {
       this.toggleProperty('item.is_completed')
       this.toggleProperty('isCompleted')
-      this.sendAction('save', this.get('item'))
+      this.sendAction('saveComplete', this.get('item'))
     },
     deleteItem (item) {
       this.sendAction('deleteItem', item)
