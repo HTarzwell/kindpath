@@ -22,8 +22,8 @@
 {{#if isAuthenticated}}
   <h2>How is your <span class="energy-head">energy level</span> today?</h2>
   <div class="energy-level">
-    <button class="normal">{{#link-to "items"}}Normal{{/link-to}}</button>
-    <button class="low" {{action toggleProperty 'lowEnergy'}}>{{#link-to "items.low"}}Low{{/link-to}}</button>
+    <button class="normal">{{#link-to "items.normal"}}Normal{{/link-to}}</button>
+    <button class="low">{{#link-to "items.low"}}Low{{/link-to}}</button>
   </div>
 {{/if}}
 

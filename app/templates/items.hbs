@@ -1,17 +1,3 @@
-<h3>My To-Dos</h3>
 <div class="all-items col-md-6">
-    {{#each model as |item|}}
-    <div class="each-item">
-      {{my-item item=item
-      updateItem='updateItem'
-      deleteItem='deleteItem'
-      saveComplete='saveComplete'}}
-    </div>
-    {{/each}}
-    <div class="add-item-button">
-      <button {{action toggleProperty 'addNew'}}>Add New Item</button>
-    </div>
-  {{#if addNew}}
-    {{new-item createItem='createItem'}}
-  {{/if}}
+  {{outlet}}
 </div>
