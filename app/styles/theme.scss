@@ -29,12 +29,12 @@ h2,
 h3 {
   color: $tomato;
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 h4 {
   color: $sea-serpent;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .navbar {
@@ -154,6 +154,7 @@ h4 {
 
 .normal:hover {
   background-color: $rackley;
+  color: $white;
 }
 
 .low {
@@ -164,6 +165,7 @@ h4 {
 
 .low:hover {
   background-color: red;
+  color: $white;
 }
 
 .crucial {
