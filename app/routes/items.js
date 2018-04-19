@@ -42,9 +42,7 @@ export default Route.extend({
       })
     },
     saveComplete (item) {
-      console.log('saveComplete is firing in items js')
       item.save()
-      console.log('item in saveComplete is', item)
     }
   }
 })
